@@ -1,0 +1,28 @@
+{
+    "dev": {
+        "lambda_handler": "process_image.process_image",
+        "aws_region": "us-east-1",
+        "project_name": "process-image",
+        "runtime": "python3.6",
+        "s3_bucket": "image-recognition-system",
+        "apigateway_enabled": false,
+        "timeout_seconds": 300,
+        "keep_warm": false,
+        "exclude": ["*.gz", "*.rar", ".tox",
+                    ".cache", "build", "htmlcov",
+                    "tests", "env", "egg-info" ]
+    },
+    "es": {
+        "lambda_handler": "happy_face.create_indices",
+        "aws_region": "us-east-1",
+        "profile_name": "default",
+        "project_name": "happy-face",
+        "runtime": "python3.6",
+        "s3_bucket": "image-recognition-system",
+        "apigateway_enabled": false,
+        "keep_warm": false,
+        "exclude": ["*.gz", "*.rar", ".tox",
+                    ".cache", "build", "htmlcov",
+                    "tests", "env", "egg-info" ]
+    }
+}
